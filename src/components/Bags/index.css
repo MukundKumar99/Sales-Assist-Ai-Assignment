@@ -1,0 +1,9 @@
+.products-list-bg-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 8px;
+  background: #0c0c0c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

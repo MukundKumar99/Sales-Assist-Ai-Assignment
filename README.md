@@ -18,7 +18,7 @@ https://www.figma.com/file/uWsNcQ6k60xf0yu34vH1pb/TT-PLP?node-id=0%3A1
 
 ### API links
 
-https://www.example.com
+https://my-json-server.typicode.com/MukundKumar99/category/db
 
 ### Routes
 
