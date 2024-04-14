@@ -11,12 +11,12 @@ function App() {
     <>
       <Navbar />
       <Switch>
-        <Route exact path="/bags" component={Bags} />
+        <Route exact path="/" component={Bags} />
         <Route exact path="/travel" component={Travel} />
         <Route exact path="/accessories" component={Accessories} />
         <Route exact path="/gifting" component={Gifting} />
         <Route exact path="/jewellery" component={Jewellery} />
-        <Redirect to="/bags" />
+        <Redirect to="/" />
       </Switch>
     </>
   );
