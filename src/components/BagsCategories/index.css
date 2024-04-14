@@ -31,7 +31,6 @@
   color: #e5dfd9;
 }
 .category-name {
-  height: 16px;
   font-family: "Encode Sans";
   font-size: 13px;
   font-weight: 400;
@@ -39,6 +38,6 @@
   letter-spacing: 0.1em;
   text-align: center;
   color: #e5dfd9;
-
+  width: 56px;
   margin-bottom: 0;
 }

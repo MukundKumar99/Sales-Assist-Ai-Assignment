@@ -3,6 +3,7 @@ import ProductsList from "../ProductsList";
 import { Component } from "react";
 import axios from "axios";
 import BagsCategories from "../BagsCategories";
+import ProductSubCategory from "../ProductSubCategory";
 
 class Bags extends Component {
   state = { bagsData: [], isLoading: true };
@@ -34,11 +35,15 @@ class Bags extends Component {
   };
 
   render() {
-    const { isLoading } = this.state;
+    const { bagsData, isLoading } = this.state;
 
     return (
       <>
         <BagsCategories />
+        <ProductSubCategory
+          subCategoryName="Bags · Backpacks"
+          productCount={bagsData.length}
+        />
         {isLoading ? null : this.renderSuccessView()}
       </>
     );

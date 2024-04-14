@@ -1,6 +1,7 @@
 import ProductsList from "../ProductsList";
 import { Component } from "react";
 import axios from "axios";
+import ProductSubCategory from "../ProductSubCategory";
 
 class Jewellery extends Component {
   state = { jewelleryData: [], isLoading: true };
@@ -35,8 +36,16 @@ class Jewellery extends Component {
   };
 
   render() {
-    const { isLoading } = this.state;
-    return <>{isLoading ? null : this.renderSuccessView()}</>;
+    const { jewelleryData, isLoading } = this.state;
+    return (
+      <>
+        <ProductSubCategory
+          subCategoryName="Jewellery · New"
+          productCount={jewelleryData.length}
+        />
+        {isLoading ? null : this.renderSuccessView()}
+      </>
+    );
   }
 }
 

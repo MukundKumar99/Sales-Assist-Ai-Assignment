@@ -1,0 +1,22 @@
+.product-sub-category {
+  background: #0c0c0c;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-category {
+  font-family: "Encode Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #e5dfd9;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.product-count {
+  margin-left: 10px;
+}

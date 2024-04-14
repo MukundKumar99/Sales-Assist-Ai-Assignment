@@ -1,6 +1,7 @@
 import ProductsList from "../ProductsList";
 import { Component } from "react";
 import axios from "axios";
+import ProductSubCategory from "../ProductSubCategory";
 
 class Travel extends Component {
   state = { travelsData: [], isLoading: true };
@@ -32,8 +33,16 @@ class Travel extends Component {
   };
 
   render() {
-    const { isLoading } = this.state;
-    return <>{isLoading ? null : this.renderSuccessView()}</>;
+    const { travelsData, isLoading } = this.state;
+    return (
+      <>
+        <ProductSubCategory
+          subCategoryName="Travel · International"
+          productCount={travelsData.length}
+        />
+        {isLoading ? null : this.renderSuccessView()}
+      </>
+    );
   }
 }
 

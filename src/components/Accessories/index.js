@@ -1,6 +1,7 @@
 import ProductsList from "../ProductsList";
 import { Component } from "react";
 import axios from "axios";
+import ProductSubCategory from "../ProductSubCategory";
 
 class Accessories extends Component {
   state = { accessoriesData: [], isLoading: true };
@@ -35,8 +36,16 @@ class Accessories extends Component {
   };
 
   render() {
-    const { isLoading } = this.state;
-    return <>{isLoading ? null : this.renderSuccessView()}</>;
+    const { accessoriesData, isLoading } = this.state;
+    return (
+      <>
+        <ProductSubCategory
+          subCategoryName="Gadgets · Latest"
+          productCount={accessoriesData.length}
+        />
+        {isLoading ? null : this.renderSuccessView()}
+      </>
+    );
   }
 }
 

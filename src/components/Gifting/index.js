@@ -1,6 +1,7 @@
 import ProductsList from "../ProductsList";
 import { Component } from "react";
 import axios from "axios";
+import ProductSubCategory from "../ProductSubCategory";
 
 class Gifting extends Component {
   state = { giftingData: [], isLoading: true };
@@ -35,8 +36,16 @@ class Gifting extends Component {
   };
 
   render() {
-    const { isLoading } = this.state;
-    return <>{isLoading ? null : this.renderSuccessView()}</>;
+    const { giftingData, isLoading } = this.state;
+    return (
+      <>
+        <ProductSubCategory
+          subCategoryName="Gifts · Unique"
+          productCount={giftingData.length}
+        />
+        {isLoading ? null : this.renderSuccessView()}
+      </>
+    );
   }
 }
 
